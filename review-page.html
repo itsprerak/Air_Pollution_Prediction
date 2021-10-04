@@ -1,0 +1,197 @@
+<html>
+<head>
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://i.ibb.co/sv7X1jJ/backgroundimg.jpg");
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+/* Add styles to the form container */
+.container {
+  position: relative;
+  top: 10px;
+  left: 400;
+  margin: 20px;
+  max-width: 500px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  opacity: 0.5;
+  top: 40px;
+  left: 100px;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: white;
+  margin: 16px;
+  max-width: 250px;
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=number], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 10px 18px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+select[type=dropdown] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 10px 18px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-img">
+
+  <form action="\" method="POST" class="container">
+    <h1 style="font-size: 40px;">Air Pollution Prediction</h1>
+
+    <label for="email"><b>PM2.5</b></label>
+    <input type="number" step="0.001" placeholder="Enter PM 2.5" name="PM2" id="PM2" required="required"><br>
+
+	<label for="email"><b>PM 10</b></label>
+    <input type="number" step="0.001" placeholder="Enter PM 10" name="PM10" id="PM10" required="required"><br>
+
+	<label for="email"><b>CO</b></label>
+    <input type="number" step="0.001" placeholder="Enter Carbon Monoxide" name="CO" id="CO" required="required"><br>
+	
+	<label for="email"><b>NO</b></label>
+    <input type="number" step="0.001" placeholder="Enter Nitrogen Monoxide" name="NO" id="NO" required="required"><br>
+	
+	<label for="email"><b>NO2</b></label>
+    <input type="number" step="0.001" placeholder="Enter Nitrogen Dioxide" name="NO2" id="NO2" required="required"><br>
+
+  <label for="email"><b>NOX</b></label>
+    <input type="number" step="0.001" placeholder="Enter Nitric oxide" name="NOx" id="NOx" required="required"><br>
+	
+	<label for="email"><b>Ozone</b></label>
+    <input type="number" step="0.001" placeholder="Enter Ozone" name="Ozone" id="Ozone" required="required"><br>
+	
+	<label for="email"><b>Sulphur Dioxide</b></label>
+    <input type="number" step="0.001" placeholder="Enter Sulphur Dioxide" name="SO2" id="SO2" required="required"><br>
+	
+	<label for="email"><b>Benzene</b></label>
+    <input type="number" step="0.001" placeholder="Enter Benzene" name="Benzene" id="Benzene" required="required"><br>
+	
+	<label for="email"><b>Toluene</b></label>
+    <input type="number" step="0.001" placeholder="Enter Toluene" name="Toluene" id="Toluene" required="required"><br>
+	
+	<label for="email"><b>Ammonia</b></label>
+    <input type="number" step="0.001" placeholder="Enter Ammonia" name="Ammonia" id="Ammonia" required="required"><br>
+	
+	<label for="Year"><b>Year:</b></label>
+  <select type="dropdown" name="Year" id = "Year">
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+    <option value="2026">2026</option>
+    <option value="2027">2027</option>
+    <option value="2028">2028</option>
+    <option value="2029">2029</option>
+    <option value="2030">2030</option>
+  </select><br><br>
+ 
+	
+	<label for="Month"><b>Month:</b></label>
+  <select type="dropdown" name="Month" id = "Month">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+  </select><br><br>
+
+	
+	<label for=""><b>City:</b></label>
+  <select type="dropdown" name="City" id = "City">
+    <option value="Ahmedabad">Ahmedabad</option>
+    <option value="Amaravati">Amaravati</option>
+    <option value="Amritsar">Amritsar</option>
+    <option value="Bengaluru">Bengaluru</option>
+    <option value="Bhopal">Bhopal</option>
+    <option value="Brajrajnagar">Brajrajnagar</option>
+    <option value="Chandigarh">Chandigarh</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Coimbatore">Coimbatore</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Ernakulam">Ernakulam</option>
+    <option value="Gurugram">Gurugram</option>
+    <option value="Guwahati">Guwahati</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Jaipur">Jaipur</option>
+    <option value="Kochi">Kochi</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Lucknow">Lucknow</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Patna">Patna</option>
+    <option value="Shillong">Shillong</option>
+    <option value="Talcher">Talcher</option>
+    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+    <option value="Visakhapatnam">Visakhapatnam</option>
+
+  </select><br><br>
+    
+    <button type="Submit" class="btn">Submit</button>
+  </form>
+  
+  
+</div>
+</body>
+</html>
